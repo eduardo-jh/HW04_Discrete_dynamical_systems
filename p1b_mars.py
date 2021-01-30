@@ -97,12 +97,6 @@ plt.legend(['population growth',
             'pop P=%g$\cdot$(1+%.4f)$^t$' % (P[0], slope),
             'dis P=%g$\cdot$(1+%.4f)$^t$' % (P[0], slope_dis)],
             loc='best')
-# plt.plot(t, P, 'kx', t, Pdis, 'b+', t, Pop, 'b-', t, Popdis, 'g--', t, Pexp, 'g^', t, PDisexp, 'm*')
-# plt.legend(['population growth',
-#             'disaster',
-#             'pop P=%g*(1+%.4f)^t' % (P[0], slope),
-#             'dis P=%g*(1+%.4f)^t' % (P[0], slope_dis)],
-#            loc='best')
 plt.xlabel('Time (years)')
 plt.ylabel('Population')
 plt.savefig('p1b_mars_%dyears_init.png' % steps, dpi=300, bbox_inches='tight')
