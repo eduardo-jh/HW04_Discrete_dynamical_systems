@@ -37,7 +37,7 @@ plt.plot(P, dP, 'kx', P, slope*P, 'b-')
 plt.legend(['data', 'linear regression $R^2$=%.2f' % results.rsquared], loc='best')
 plt.xlabel('P')
 plt.ylabel('dP')
-plt.savefig('p4_polymerase_linear2.png', dpi=300, bbox_inches='tight')
+# plt.savefig('p4_polymerase_linear2.png', dpi=300, bbox_inches='tight')
 
 # Generate an exponential equation (exact solution)
 tdouble = np.log(2)/np.log(1+slope)*dt
@@ -52,9 +52,9 @@ print("The DNA amount after %d cicles is: %g" % (steps, Pmodel[-1]))
 # Figure 2, plotting P (from data and model) vs t
 plt.figure(2)
 plt.plot(t, Pmodel, 'bo', t, Pexp, 'r-')
-plt.legend(['numerical P=%g*(1+%.4f)^t' % (P[0], slope),
+plt.legend([r'numerical P=%g*(1+%.2f)$^t$' % (P[0], slope),
             'exact P=%g*exp(%.4f*t)' % (P[0], K)],
             loc='best')
 plt.xlabel('Time (cicles)')
 plt.ylabel('Amount of DNA')
-plt.savefig('p4_polymerase_model2.png', dpi=300, bbox_inches='tight')
+# plt.savefig('p4_polymerase_model2.png', dpi=300, bbox_inches='tight')
